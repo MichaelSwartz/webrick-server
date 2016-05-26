@@ -10,7 +10,7 @@ end
 
 server.mount_proc '/echo' do |req, res|
     post = JSON.parse(req.body)
-    res.body = "<h1>#{post['value']}</h1>"
+    res.body = "<h1>{{#{post['value']}}}</h1>"
 end
 
 count = 0
